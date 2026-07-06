@@ -2,6 +2,8 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=280&section=header&text=AeroTwin&fontSize=90&fontColor=00A8E8&animation=fadeIn&fontAlignY=40&desc=Real-Time%20Digital%20Twin%20for%20Predictive%20Aircraft%20Engine%20Health%20Monitoring&descAlignY=62&descColor=CADCFC&descSize=18&stroke=005B9E&strokeWidth=2" width="100%"/>
 
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=800&color=00A8E8&center=true&vCenter=true&multiline=false&width=700&lines=Real-Time+Aircraft+Engine+Digital+Twin;NASA+C-MAPSS+%7C+Random+Forest+ML+%7C+WebSocket+Streaming;Edge+AI+%7C+Predictive+Maintenance+%7C+InnoVent-27;Team+FELONS+%E2%9C%88+Aerospace+Track" alt="AeroTwin typing animation"/>
+
 <br/>
 
 [![InnoVent](https://img.shields.io/badge/🏆%20InnoVent--27-Tata%20Technologies-0D1B3E?style=for-the-badge&labelColor=0D1B3E&color=005B9E)](https://www.tatatechnologies.com)
