@@ -130,21 +130,21 @@ Modern commercial aircraft engines degrade every single flight. Yet the global a
 <div align="center">
 
 ### Dashboard Overview — All Components Nominal
-<img src="Screenshot/01.png" alt="AeroTwin Dashboard — All components at GREEN health" width="90%" style="border-radius: 10px; border: 2px solid #00A8E8; margin-bottom: 16px;"/>
+<img src="Screenshots/01.png" alt="AeroTwin Dashboard — All components at GREEN health" width="90%" style="border-radius: 10px; border: 2px solid #00A8E8; margin-bottom: 16px;"/>
 
 <sub>All three engine components at GREEN (100% health) on startup. Three.js 3D model glows green; health cards, RUL panel, and alert sidebar visible.</sub>
 
 <br/><br/>
 
 ### Live Sensor Streaming — Fatigue Accumulation in Progress
-<img src="Screenshot/02.png" alt="AeroTwin Live Simulation — real-time sensor streaming and fatigue charts" width="90%" style="border-radius: 10px; border: 2px solid #F07D00; margin-bottom: 16px;"/>
+<img src="Screenshots/02.png" alt="AeroTwin Live Simulation — real-time sensor streaming and fatigue charts" width="90%" style="border-radius: 10px; border: 2px solid #F07D00; margin-bottom: 16px;"/>
 
 <sub>Simulation running: Recharts trend graphs update every 2 seconds. Bearing component has crossed into AMBER — automatic maintenance alert fired with no human input.</sub>
 
 <br/><br/>
 
 ### Anomaly Injection — CRITICAL Alert Triggered
-<img src="Screenshot/03.png" alt="AeroTwin Anomaly Injection — CRITICAL alert within 2 seconds" width="90%" style="border-radius: 10px; border: 2px solid #C00000; margin-bottom: 16px;"/>
+<img src="Screenshots/03.png" alt="AeroTwin Anomaly Injection — CRITICAL alert within 2 seconds" width="90%" style="border-radius: 10px; border: 2px solid #C00000; margin-bottom: 16px;"/>
 
 <sub>Anomaly injected via dashboard button. Turbine blade spikes to CRITICAL in under 2 seconds. Three.js model turns red; alert panel pulses with recommended ground action and predicted RUL.</sub>
 
