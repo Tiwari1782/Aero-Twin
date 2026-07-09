@@ -1,0 +1,12 @@
+flask
+flask-socketio
+flask-cors
+psycopg2-binary
+scikit-learn
+pandas
+numpy
+joblib
+eventlet
+python-dotenv
+pytest
+shap
