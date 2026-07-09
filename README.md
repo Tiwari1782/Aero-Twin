@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=280&section=header&text=AeroTwin&fontSize=90&fontColor=00A8E8&animation=fadeIn&fontAlignY=40&desc=Real-Time%20Digital%20Twin%20for%20Predictive%20Aircraft%20Engine%20Health%20Monitoring&descAlignY=62&descColor=CADCFC&descSize=18&stroke=005B9E&strokeWidth=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00A8E8&height=280&section=header&text=AeroTwin&fontSize=90&fontColor=ffffff&animation=fadeIn&fontAlignY=40&desc=Real-Time%20Digital%20Twin%20for%20Predictive%20Aircraft%20Engine%20Health%20Monitoring&descAlignY=62&descColor=CADCFC&descSize=18&stroke=0077B6&strokeWidth=2" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=800&color=00A8E8&center=true&vCenter=true&multiline=false&width=700&lines=Real-Time+Aircraft+Engine+Digital+Twin;NASA+C-MAPSS+%7C+Random+Forest+ML+%7C+WebSocket+Streaming;Edge+AI+%7C+Predictive+Maintenance+%7C+InnoVent-27;Team+FELONS+%E2%9C%88+Aerospace+Track" alt="AeroTwin typing animation"/>
 
@@ -68,6 +68,7 @@
 <summary><b>Click to expand full table of contents</b></summary>
 
 - [What is AeroTwin?](#-what-is-aerotwin)
+- [Prototype Screenshots](#-prototype-screenshots)
 - [Live Demo Highlights](#-live-demo-highlights)
 - [Engine Scope](#-engine-scope)
 - [Two Data Modes](#-two-data-modes)
@@ -117,6 +118,35 @@ Modern commercial aircraft engines degrade every single flight. Yet the global a
 | ✈ **Turbine Blade** | Temperature, thermal stress, FOD damage | Fan Degradation | FD003 / FD004 |
 | ⚙ **Bearing** | Vibration amplitude, RPM deviation, wear rate | HPC Degradation | FD003 / FD004 |
 | 🌀 **Compressor** | Pressure loss, fouling, flow instability | HPC Degradation | FD003 / FD004 |
+
+</div>
+
+---
+
+## 📸 Prototype Screenshots
+
+> Real prototype views from AeroTwin's dashboard — built for the InnoVent-27 demo.
+
+<div align="center">
+
+### Dashboard Overview — All Components Nominal
+<img src="Screenshots/01.png" alt="AeroTwin Dashboard — All components at GREEN health" width="90%" style="border-radius: 10px; border: 2px solid #00A8E8; margin-bottom: 16px;"/>
+
+<sub>All three engine components at GREEN (100% health) on startup. Three.js 3D model glows green; health cards, RUL panel, and alert sidebar visible.</sub>
+
+<br/><br/>
+
+### Live Sensor Streaming — Fatigue Accumulation in Progress
+<img src="Screenshots/02.png" alt="AeroTwin Live Simulation — real-time sensor streaming and fatigue charts" width="90%" style="border-radius: 10px; border: 2px solid #F07D00; margin-bottom: 16px;"/>
+
+<sub>Simulation running: Recharts trend graphs update every 2 seconds. Bearing component has crossed into AMBER — automatic maintenance alert fired with no human input.</sub>
+
+<br/><br/>
+
+### Anomaly Injection — CRITICAL Alert Triggered
+<img src="Screenshots/03.png" alt="AeroTwin Anomaly Injection — CRITICAL alert within 2 seconds" width="90%" style="border-radius: 10px; border: 2px solid #C00000; margin-bottom: 16px;"/>
+
+<sub>Anomaly injected via dashboard button. Turbine blade spikes to CRITICAL in under 2 seconds. Three.js model turns red; alert panel pulses with recommended ground action and predicted RUL.</sub>
 
 </div>
 
@@ -389,6 +419,11 @@ AeroTwin/
 │       ├── AlertPanel.jsx              # 🟠 Alert sidebar + CRITICAL pulse animation
 │       ├── RULPanel.jsx                # 🟠 Predicted RUL + confidence band display
 │       └── HistoryModal.jsx            # 🟡 Historical sensor log modal
+│
+├── 📸 Screenshot/                      # Prototype screenshots
+│   ├── 01.png                          # Dashboard overview — all components nominal
+│   ├── 02.png                          # Live simulation — sensor streaming + AMBER alert
+│   └── 03.png                          # Anomaly injection — CRITICAL alert fired
 │
 ├── .env.example                        # 🔴 Environment variable template
 ├── .gitignore                          # Python + Node + .env ignores
@@ -839,6 +874,6 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=120&section=footer&fontColor=00A8E8" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00A8E8&height=120&section=footer" width="100%"/>
 
 </div>
