@@ -10,3 +10,6 @@ eventlet
 python-dotenv
 pytest
 shap
+
+# venv\Scripts\pytest server\tests
+# venv\Scripts\python ml\train_model.py
