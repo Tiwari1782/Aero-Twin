@@ -314,26 +314,26 @@ What it unlocks:
 
 | # | Feature | Area | Impact | Size |
 |---|---|---|---|---|
-| 4.1 | LSTM / Transformer Model | ML | 🔥🔥🔥 | Large |
-| 4.3 | Bayesian Uncertainty Quantification | ML | 🔥🔥 | Medium |
-| 4.4 | Online Learning / Drift Detection | ML | 🔥🔥🔥 | Large |
-| 4.6 | Authentication & Multi-User | Backend | 🔥🔥 | Medium |
-| 4.8 | Data Retention & Archival | Backend | 🔥🔥 | Medium |
-| 4.9 | Health Check Endpoint | Backend | 🔥 | Small |
-| 4.10 | Async DB Write Queue | Backend | 🔥🔥 | Medium |
-| 4.11 | 3D Engine Visualization | Frontend | 🔥🔥🔥 | Large |
-| 4.12 | RUL Projection Charts | Frontend | 🔥🔥 | Medium |
-| 4.13 | Dark / Light Theme Toggle | Frontend | 🔥 | Small |
-| 4.15 | Mobile Responsiveness | Frontend | 🔥🔥 | Medium |
-| 4.16 | Full Docker Compose Stack | Architecture | 🔥🔥 | Medium |
-| 4.17 | CI/CD Pipeline | Architecture | 🔥🔥 | Medium |
-| 4.19 | API Rate Limiting | Architecture | 🔥 | Small |
-| 4.20 | Multi-Engine Fleet View | Feature | 🔥🔥🔥 | Large |
-| 4.21 | Maintenance Cost Optimizer | Feature | 🔥🔥🔥 | Large |
-| 4.22 | Edge AI Deployment (Jetson) | Feature | 🔥🔥🔥 | Large |
-| 4.23 | Natural Language Querying (LLM) | Feature | 🔥🔥 | Medium |
-| 4.24 | Notification System | Feature | 🔥🔥 | Medium |
-| 4.25 | Digital Twin Sync Protocol | Feature | 🔥🔥🔥 | Large |
+| 4.1 | LSTM / Transformer Model | ML | ★ ★ ★ | Large |
+| 4.3 | Bayesian Uncertainty Quantification | ML | ★ ★ | Medium |
+| 4.4 | Online Learning / Drift Detection | ML | ★ ★ ★ | Large |
+| 4.6 | Authentication & Multi-User | Backend | ★ ★ | Medium |
+| 4.8 | Data Retention & Archival | Backend | ★ ★ | Medium |
+| 4.9 | Health Check Endpoint | Backend | ★ | Small |
+| 4.10 | Async DB Write Queue | Backend | ★ ★ | Medium |
+| 4.11 | 3D Engine Visualization | Frontend | ★ ★ ★ | Large |
+| 4.12 | RUL Projection Charts | Frontend | ★ ★ | Medium |
+| 4.13 | Dark / Light Theme Toggle | Frontend | ★ | Small |
+| 4.15 | Mobile Responsiveness | Frontend | ★ ★ | Medium |
+| 4.16 | Full Docker Compose Stack | Architecture | ★ ★ | Medium |
+| 4.17 | CI/CD Pipeline | Architecture | ★ ★ | Medium |
+| 4.19 | API Rate Limiting | Architecture | ★ | Small |
+| 4.20 | Multi-Engine Fleet View | Feature | ★ ★ ★ | Large |
+| 4.21 | Maintenance Cost Optimizer | Feature | ★ ★ ★ | Large |
+| 4.22 | Edge AI Deployment (Jetson) | Feature | ★ ★ ★ | Large |
+| 4.23 | Natural Language Querying (LLM) | Feature | ★ ★ | Medium |
+| 4.24 | Notification System | Feature | ★ ★ | Medium |
+| 4.25 | Digital Twin Sync Protocol | Feature | ★ ★ ★ | Large |
 
 ---
 
