@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dynamic User Uploads
+Data/uploads/*
+!Data/uploads/.gitkeep
