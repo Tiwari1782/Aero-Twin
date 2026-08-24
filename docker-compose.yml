@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: aerotwin_postgres
+    environment:
+      POSTGRES_DB: aerotwin_db
+      POSTGRES_USER: aerotwin_user
+      POSTGRES_PASSWORD: Prakash2005
+    ports:
+      - "5432:5432"
+    volumes:
+      - aerotwin_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aerotwin_user -d aerotwin_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: aerotwin_backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./server:/app/server
+      - ./ml:/app/ml
+      - ./Data:/app/Data
+    command: python server/app.py
+
+volumes:
+  aerotwin_pgdata:
