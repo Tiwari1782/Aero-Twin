@@ -123,30 +123,62 @@ Modern commercial aircraft engines degrade every single flight. Yet the global a
 
 ---
 
-## 📸 Prototype Screenshots
+---
 
-> Real prototype views from AeroTwin's dashboard — built for the IIC 3.0 International Innovation Challenge (MU Jaipur).
+## 📸 Prototype Screenshots & Visual Walkthrough
+
+> **Interactive Cyberpunk UI & Real-Time Digital Twin Dashboard** — Built & presented for the **IIC 3.0 International Innovation Challenge (Manipal University Jaipur)**.
 
 <div align="center">
 
-### Dashboard Overview — All Components Nominal
-<img src="Screenshots/01.png" alt="AeroTwin Dashboard — All components at GREEN health" width="90%" style="border-radius: 10px; border: 2px solid #00A8E8; margin-bottom: 16px;"/>
+### 🟢 1. Primary Flight Dashboard — All Subsystems Nominal (100% Health)
+[![AeroTwin Nominal Dashboard](Screenshots/01.png)](Screenshots/01.png)
 
-<sub>All three engine components at GREEN (100% health) on startup. Three.js 3D model glows green; health cards, RUL panel, and alert sidebar visible.</sub>
+<table width="100%">
+<tr>
+<td align="left">
+<b>Key Visual Highlights:</b><br/>
+• <b>Interactive 3D Jet Engine:</b> Real-time Three.js GLTF model glowing emerald green (Nominal condition)<br/>
+• <b>Subsystem Health Cards:</b> Live health scores for Turbine Blades, Bearings, and Compressor<br/>
+• <b>Remaining Useful Life (RUL):</b> Random Forest prediction with active confidence interval<br/>
+• <b>Telemetry Stream:</b> Sub-second telemetry cards tracking exhaust temperature, core vibration, and pressure
+</td>
+</tr>
+</table>
 
-<br/><br/>
+<br/>
 
-### Live Sensor Streaming — Fatigue Accumulation in Progress
-<img src="Screenshots/02.png" alt="AeroTwin Live Simulation — real-time sensor streaming and fatigue charts" width="90%" style="border-radius: 10px; border: 2px solid #F07D00; margin-bottom: 16px;"/>
+### 🟡 2. Continuous Telemetry Streaming & Fatigue Accumulation
+[![AeroTwin Live Streaming](Screenshots/02.png)](Screenshots/02.png)
 
-<sub>Simulation running: Recharts trend graphs update every 2 seconds. Bearing component has crossed into AMBER — automatic maintenance alert fired with no human input.</sub>
+<table width="100%">
+<tr>
+<td align="left">
+<b>Key Visual Highlights:</b><br/>
+• <b>Live Recharts Trends:</b> Continuous dual-axis area chart for thermal and vibration fatigue drift<br/>
+• <b>Automated Warning Thresholds:</b> Bearing component degrades into Amber threshold (70% health)<br/>
+• <b>Zero-Latency WebSocket Push:</b> Client receives 2-second telemetry packets via Socket.IO<br/>
+• <b>Multi-Mode Operational Toggle:</b> Instant switching between Live Simulation and NASA C-MAPSS dataset
+</td>
+</tr>
+</table>
 
-<br/><br/>
+<br/>
 
-### Anomaly Injection — CRITICAL Alert Triggered
-<img src="Screenshots/03.png" alt="AeroTwin Anomaly Injection — CRITICAL alert within 2 seconds" width="90%" style="border-radius: 10px; border: 2px solid #C00000; margin-bottom: 16px;"/>
+### 🚨 3. Real-Time Fault Injection & Critical Anomaly Alarm
+[![AeroTwin Anomaly Triggered](Screenshots/03.png)](Screenshots/03.png)
 
-<sub>Anomaly injected via dashboard button. Turbine blade spikes to CRITICAL in under 2 seconds. Three.js model turns red; alert panel pulses with recommended ground action and predicted RUL.</sub>
+<table width="100%">
+<tr>
+<td align="left">
+<b>Key Visual Highlights:</b><br/>
+• <b>Instant Anomaly Trigger:</b> One-click fault injection produces critical alarm in <b>< 2.0 seconds</b><br/>
+• <b>Dynamic 3D Visual Feedback:</b> Jet Engine mesh shifts to vivid red with pulsing alarm beacon<br/>
+• <b>SHAP Feature Attribution:</b> Explains exact sensor anomalies driving RUL reduction<br/>
+• <b>Auditable Maintenance Action:</b> Prescribes immediate ground inspection & maintenance ticket
+</td>
+</tr>
+</table>
 
 </div>
 
