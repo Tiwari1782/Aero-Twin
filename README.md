@@ -2,11 +2,11 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=00A8E8&height=280&section=header&text=AeroTwin&fontSize=90&fontColor=ffffff&animation=fadeIn&fontAlignY=40&desc=Real-Time%20Digital%20Twin%20for%20Predictive%20Aircraft%20Engine%20Health%20Monitoring&descAlignY=62&descColor=CADCFC&descSize=18&stroke=0077B6&strokeWidth=2" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=800&color=00A8E8&center=true&vCenter=true&multiline=false&width=700&lines=Real-Time+Aircraft+Engine+Digital+Twin;NASA+C-MAPSS+%7C+Random+Forest+ML+%7C+WebSocket+Streaming;Edge+AI+%7C+Predictive+Maintenance+%7C+InnoVent-27;Team+FELONS+%E2%9C%88+Aerospace+Track" alt="AeroTwin typing animation"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=800&color=00A8E8&center=true&vCenter=true&multiline=false&width=700&lines=Real-Time+Aircraft+Engine+Digital+Twin;NASA+C-MAPSS+%7C+Random+Forest+ML+%7C+WebSocket+Streaming;Edge+AI+%7C+Predictive+Maintenance+%7C+IIC+3.0;Team+FELONS+%E2%9C%88+Aerospace+Track" alt="AeroTwin typing animation"/>
 
 <br/>
 
-[![InnoVent](https://img.shields.io/badge/🏆%20InnoVent--27-Tata%20Technologies-0D1B3E?style=for-the-badge&labelColor=0D1B3E&color=005B9E)](https://www.tatatechnologies.com)
+[![IIC 3.0](https://img.shields.io/badge/🏆%20IIC%203.0-Manipal%20University%20Jaipur-0D1B3E?style=for-the-badge&labelColor=0D1B3E&color=005B9E)](https://jaipur.manipal.edu)
 [![Track](https://img.shields.io/badge/✈%20Track-AI%20at%20the%20Edge%20│%20Aerospace-005B9E?style=for-the-badge&labelColor=005B9E&color=00A8E8)](/)
 [![Status](https://img.shields.io/badge/⚡%20Status-In%20Development-F07D00?style=for-the-badge&labelColor=F07D00&color=E06500)](/)
 [![License](https://img.shields.io/badge/📄%20License-MIT-007A3D?style=for-the-badge&labelColor=007A3D&color=005C2E)](LICENSE)
@@ -56,7 +56,7 @@
 
 <br/>
 
-**Team FELONS** &nbsp;·&nbsp; Tata Technologies InnoVent-27 &nbsp;·&nbsp; AI at the Edge &nbsp;·&nbsp; Aerospace Track
+**Team FELONS** &nbsp;·&nbsp; IIC 3.0 International Innovation Challenge, Manipal University Jaipur &nbsp;·&nbsp; AI at the Edge &nbsp;·&nbsp; Aerospace Track
 
 ---
 
@@ -125,7 +125,7 @@ Modern commercial aircraft engines degrade every single flight. Yet the global a
 
 ## 📸 Prototype Screenshots
 
-> Real prototype views from AeroTwin's dashboard — built for the InnoVent-27 demo.
+> Real prototype views from AeroTwin's dashboard — built for the IIC 3.0 International Innovation Challenge (MU Jaipur).
 
 <div align="center">
 
@@ -866,7 +866,7 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 
 **Built with ❤️ by Team FELONS**
 
-*Tata Technologies InnoVent-27 &nbsp;·&nbsp; Theme: AI at the Edge &nbsp;·&nbsp; Track: Aerospace*
+*IIC 3.0 International Innovation Challenge, Manipal University Jaipur &nbsp;·&nbsp; Theme: AI at the Edge &nbsp;·&nbsp; Track: Aerospace*
 
 <br/>
 
