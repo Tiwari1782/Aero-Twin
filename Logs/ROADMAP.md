@@ -349,4 +349,4 @@ What it unlocks:
 
 ---
 
-*AeroTwin · Team FELONS · Tata Technologies InnoVent-27*
+*AeroTwin · Team FELONS · IIC 3.0 International Innovation Challenge, Manipal University Jaipur*

@@ -332,4 +332,4 @@ Dataset available at: [data.nasa.gov](https://data.nasa.gov/dataset/cmapss-jet-e
 
 ---
 
-*AeroTwin · Team FELONS · Tata Technologies InnoVent-27*
+*AeroTwin · Team FELONS · IIC 3.0 International Innovation Challenge, Manipal University Jaipur*
