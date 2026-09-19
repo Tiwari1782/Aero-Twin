@@ -898,7 +898,7 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 
 **Built with ❤️ by Team FELONS**
 
-*IIC 3.0 International Innovation Challenge, Manipal University Jaipur &nbsp;·&nbsp; Theme: AI at the Edge &nbsp;·&nbsp; Track: Aerospace*
+
 
 <br/>
 
