@@ -115,14 +115,14 @@ class AlertEngine:
         temp = float(reading.get('temperature', 0))
         vib = float(reading.get('vibration', 0))
 
-        # Update rolling windows
-        self.vib_history[comp_id].append(vib)
-        self.temp_history[comp_id].append(temp)
-
-        # Compute z-scores with sensible noise floors (vibration: min_diff=10, temp: min_diff=50)
+        # Compute z-scores against history before appending current reading
         z_score_vib = self._compute_z_score(vib, self.vib_history[comp_id], min_std=2.0, min_diff=10.0)
         z_score_temp = self._compute_z_score(temp, self.temp_history[comp_id], min_std=5.0, min_diff=50.0)
         max_z_score = max(z_score_vib, z_score_temp)
+
+        # Update rolling windows
+        self.vib_history[comp_id].append(vib)
+        self.temp_history[comp_id].append(temp)
 
         # Anomaly detection — only triggers on massive spikes (e.g., injected anomaly)
         anomaly_flag = max_z_score > ANOMALY_Z_THRESHOLD

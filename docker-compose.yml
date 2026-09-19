@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_DB: aerotwin_db
       POSTGRES_USER: aerotwin_user
-      POSTGRES_PASSWORD: Prakash2005
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
     volumes:

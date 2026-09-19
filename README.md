@@ -403,7 +403,7 @@ python data/download_dataset.py
 ### 21 Sensor Channels → 3 AeroTwin Components
 
 ```
-s3, s4, s20  (turbine temperatures + cooling air)  ──────►  ✈ Turbine Blade Health
+s3, s4, s21  (turbine temperatures + coolant proxy)  ──────►  ✈ Turbine Blade Health
 s2, s7, s11, s17  (compressor pressure + enthalpy)  ─────►  🌀 Compressor Health
 s8, s9, s13, s14  (fan/core rotation speeds)  ───────────►  ⚙ Bearing Health
 s1, s5, s6, s10, s16, s18, s19  (near-zero variance)  ───►  Dropped during preprocessing
@@ -788,8 +788,8 @@ model = RandomForestRegressor(
 
 | Item | Detail |
 |---|---|
-| **Training data** | 70% NASA C-MAPSS FD003+FD004 + 30% synthetic trajectories |
-| **Train/test split** | 80% / 20% stratified by fault type |
+| **Training data** | 70% NASA C-MAPSS FD001-FD004 + 30% synthetic trajectories |
+| **Train/test split** | 5-Fold GroupKFold (split by engine_id to prevent data leakage) |
 | **MAE** | ~12–18 flight hours |
 | **RMSE** | ~22–30 flight hours |
 | **R²** | ~0.91–0.94 |

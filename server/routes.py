@@ -102,24 +102,14 @@ def get_history():
         session_id=None  # Return all sessions
     )
 
-    # Serialize datetime objects
+    # Serialize datetime and Decimal objects
     serialized = []
     for row in rows:
-        item = {}
-        for k, v in row.items():
-            if isinstance(v, datetime):
-                item[k] = v.isoformat()
-            elif hasattr(v, '__float__'):
-                item[k] = float(v)
-            else:
-                item[k] = str(v) if v is not None else None
-            item[k] = v if not isinstance(v, datetime) else v.isoformat()
-        # Clean serialization
         clean = {}
         for k, v in row.items():
             if isinstance(v, datetime):
                 clean[k] = v.isoformat()
-            elif hasattr(v, 'is_integer'):  # Decimal
+            elif hasattr(v, 'is_integer') or hasattr(v, '__float__') and not isinstance(v, (int, bool)):
                 clean[k] = float(v)
             else:
                 clean[k] = v

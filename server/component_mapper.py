@@ -2,7 +2,7 @@
 component_mapper.py — Maps C-MAPSS sensor columns to AeroTwin components.
 
 Sensor Mapping (from C-MAPSS 21-sensor schema):
-  turbine_blade: s3 (HPC outlet temp), s4 (LPT outlet temp), s20 (BPR)
+  turbine_blade: s3 (HPC outlet temp), s4 (LPT outlet temp), s21 (BPR proxy)
   compressor:    s2 (T2, total temp fan inlet), s7 (T50, total temp LPT), 
                  s11 (physical fan speed), s17 (bleed enthalpy)
   bearing:       s8 (physical core speed), s9 (HPC outlet static pressure),
@@ -93,7 +93,7 @@ def map_cmapss_row(row_dict):
         elif comp_id == 'compressor':
             # s2 (T2 fan inlet ~642) = temperature
             # s11 (physical fan speed ~47.3) = vibration proxy
-            # s17 (bleed enthalpy ~8135) = RPM
+            # s17 (bleed enthalpy ~392) = RPM
             temperature = sensor_values[0]  # s2
             vibration = sensor_values[2]    # s11
             rpm = sensor_values[3]          # s17

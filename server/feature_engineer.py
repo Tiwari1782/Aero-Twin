@@ -22,7 +22,7 @@ from component_mapper import COMPONENT_SENSOR_MAP
 # Baseline RPM values for drift computation
 BASELINE_RPM = {
     'turbine_blade': 1400.0,
-    'compressor': 8135.0,
+    'compressor': 392.0,
     'bearing': 8130.0,
 }
 

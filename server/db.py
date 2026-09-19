@@ -15,7 +15,7 @@ load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 DATABASE_URL = os.getenv(
     'DATABASE_URL',
-    'postgresql://aerotwin_user:Prakash2005@localhost:5432/aerotwin_db'
+    'postgresql://aerotwin_user:password@localhost:5432/aerotwin_db'
 )
 
 # Connection pool — min 2, max 10 connections

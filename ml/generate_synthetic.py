@@ -1,7 +1,7 @@
 """
 generate_synthetic.py — Generate synthetic degradation trajectories for training.
 
-Generates 5,000 synthetic engine degradation trajectories using the same
+Generates 40 synthetic engine degradation trajectories using the same
 physics-informed formulas as the live simulator. This supplements the
 real C-MAPSS data for ML training (30% synthetic / 70% real).
 """
@@ -18,7 +18,7 @@ server_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 sys.path.insert(0, server_dir)
 
 from component_mapper import COMPONENT_IDS
-from feature_engineer import FEATURE_NAMES
+from feature_engineer import FEATURE_NAMES, compute_features
 
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'synthetic_data.csv')
@@ -36,7 +36,7 @@ PROFILES = {
         'base_temp': 642.0, 'temp_rate': 0.5, 'temp_noise': 1.5,
         'base_vib': 47.3, 'vib_rate': 0.002, 'vib_noise': 0.3,
         'vib_exp_threshold': 100, 'vib_exp_factor': 0.012,
-        'base_rpm': 8135.0, 'rpm_drift_pct': -0.0002, 'rpm_noise': 5.0,
+        'base_rpm': 392.0, 'rpm_drift_pct': -0.0002, 'rpm_noise': 5.0,
         'sensitivity': 0.9,
     },
     'bearing': {
@@ -53,11 +53,7 @@ def generate_trajectory(engine_id, comp_id, max_cycles):
     """Generate a single synthetic degradation trajectory."""
     profile = PROFILES[comp_id]
     rows = []
-
-    temps = []
-    vibs = []
-    rpms = []
-    flight_hours = []
+    readings_history = []
     cumulative_fatigue = 0.0
 
     # Add slight randomness to degradation rates
@@ -86,10 +82,13 @@ def generate_trajectory(engine_id, comp_id, max_cycles):
 
         rul = max_cycles - cycle  # True RUL
 
-        temps.append(temp)
-        vibs.append(vib)
-        rpms.append(rpm)
-        flight_hours.append(cycle)
+        readings_history.append({
+            'component_id': comp_id,
+            'temperature': temp,
+            'vibration': vib,
+            'rpm': rpm,
+            'flight_hour': cycle,
+        })
 
         # Fatigue
         t_factor = max(temp / max(profile['base_temp'], 1.0), 0.01)
@@ -100,68 +99,22 @@ def generate_trajectory(engine_id, comp_id, max_cycles):
         cumulative_fatigue += fatigue_delta
         health_score = max(0, 100.0 - cumulative_fatigue)
 
-        if len(temps) < 10:
+        if len(readings_history) < 10:
             continue
 
-        # Compute features
-        last_10_temps = np.array(temps[-10:])
-        last_10_vibs = np.array(vibs[-10:])
-        last_20_vibs = np.array(vibs[-20:])
-
-        rolling_mean_vib = float(np.mean(last_10_vibs))
-        rolling_std_vib = float(np.std(last_10_vibs))
-
-        if len(last_20_vibs) > 1:
-            x = np.arange(len(last_20_vibs))
-            coeffs = np.polyfit(x, last_20_vibs, 1)
-            vib_slope = float(coeffs[0])
-        else:
-            vib_slope = 0.0
-
-        rolling_mean_temp = float(np.mean(last_10_temps))
-        rolling_std_temp = float(np.std(last_10_temps))
-
-        fh_arr = np.array(flight_hours[-10:])
-        if (fh_arr[-1] - fh_arr[0]) > 0:
-            temp_rise_rate = (last_10_temps[-1] - last_10_temps[0]) / (fh_arr[-1] - fh_arr[0])
-        else:
-            temp_rise_rate = 0.0
-
-        rpm_drift = (rpms[-1] - profile['base_rpm']) / profile['base_rpm']
-
-        if rolling_std_vib > 0 and rolling_std_temp > 0:
-            corr = np.corrcoef(last_10_vibs, last_10_temps)
-            vib_temp_corr = float(corr[0, 1])
-            if np.isnan(vib_temp_corr):
-                vib_temp_corr = 0.0
-        else:
-            vib_temp_corr = 0.0
-
-        fh_norm = min(cycle / 1000.0, 1.0)
-
-        z_scores = []
-        if rolling_std_vib > 0:
-            z_scores.extend(np.abs((last_10_vibs - rolling_mean_vib) / rolling_std_vib).tolist())
-        if rolling_std_temp > 0:
-            z_scores.extend(np.abs((last_10_temps - rolling_mean_temp) / rolling_std_temp).tolist())
-        max_z = max(z_scores) if z_scores else 0.0
+        fatigue_data = {
+            'cumulative_fatigue': cumulative_fatigue,
+            'health_score': health_score,
+        }
+        features = compute_features(readings_history, fatigue_data)
+        if not features:
+            continue
 
         rows.append({
             'engine_id': engine_id,
             'component_id': comp_id,
             'cycle': cycle,
-            'rolling_mean_vibration_10': round(rolling_mean_vib, 6),
-            'rolling_std_vibration_10': round(rolling_std_vib, 6),
-            'vibration_slope_20': round(vib_slope, 6),
-            'rolling_mean_temp_10': round(rolling_mean_temp, 6),
-            'temp_rise_rate': round(float(temp_rise_rate), 6),
-            'rolling_std_temp_10': round(rolling_std_temp, 6),
-            'rpm_drift': round(rpm_drift, 6),
-            'vib_temp_correlation': round(vib_temp_corr, 6),
-            'cumulative_fatigue': round(cumulative_fatigue, 4),
-            'health_score': round(health_score, 4),
-            'flight_hour_normalised': round(fh_norm, 6),
-            'max_z_score_10': round(max_z, 4),
+            **features,
             'RUL': rul,
         })
 
