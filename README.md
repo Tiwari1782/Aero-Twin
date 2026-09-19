@@ -6,7 +6,7 @@
 
 <br/>
 
-[![IIC 3.0](https://img.shields.io/badge/🏆%20IIC%203.0-Manipal%20University%20Jaipur-0D1B3E?style=for-the-badge&labelColor=0D1B3E&color=005B9E)](https://jaipur.manipal.edu)
+
 [![Track](https://img.shields.io/badge/✈%20Track-AI%20at%20the%20Edge%20│%20Aerospace-005B9E?style=for-the-badge&labelColor=005B9E&color=00A8E8)](/)
 [![Status](https://img.shields.io/badge/⚡%20Status-In%20Development-F07D00?style=for-the-badge&labelColor=F07D00&color=E06500)](/)
 [![License](https://img.shields.io/badge/📄%20License-MIT-007A3D?style=for-the-badge&labelColor=007A3D&color=005C2E)](LICENSE)
