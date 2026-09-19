@@ -56,7 +56,7 @@
 
 <br/>
 
-**Team FELONS** &nbsp;·&nbsp; IIC 3.0 International Innovation Challenge, Manipal University Jaipur &nbsp;·&nbsp; AI at the Edge &nbsp;·&nbsp; Aerospace Track
+
 
 ---
 
